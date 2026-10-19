@@ -8,7 +8,7 @@ AutsPanel is developed by [Aashish Timalsina](https://github.com/aashishtimalsin
 
 ## What's inside
 
-Plain HTML and CSS — no framework, no build step, no tracking. A few lines of JavaScript add copy buttons and are not required.
+Plain HTML and CSS — no framework, no build step, no tracking, no third-party requests. A small script adds the light/dark switch, ⌘K docs search, the product-tour tabs and copy buttons; every page still works without JavaScript.
 
 ```
 index.html                     Home page
@@ -17,8 +17,10 @@ compare/                       AutsPanel vs cPanel, aaPanel, Plesk and other pan
 docs/                          Documentation (installation, websites, deployments, …)
 about.html                     Project, developer and contact
 404.html                       Not-found page (GitHub Pages serves it automatically)
-assets/css/style.css           All styles (light and dark mode)
-assets/js/main.js              Copy buttons, mobile menu
+assets/css/style.css           All styles (light and dark theme)
+assets/js/main.js              Theme switch, search, tabs, copy buttons, animations
+assets/js/search-index.js      Pages and sections the search box can find
+assets/fonts/                  Inter variable font (SIL Open Font License)
 assets/img/                    Screenshots, social image and icons
 sitemap.xml, robots.txt        For search engines
 site.webmanifest, favicon.svg  Icons
@@ -58,7 +60,9 @@ grep -rl 'https://auts-tech.github.io/autspanel' . --exclude-dir=.git \
 
 ## Editing pages
 
-Each page is a complete HTML file, so the header and footer are repeated in every page. When you change navigation or footer links, search and replace across all `.html` files. Keep the `<title>`, `<meta name="description">` and the JSON-LD block of a page in sync with its content, and add new pages to `sitemap.xml`.
+Each page is a complete HTML file, so the header and footer are repeated in every page. When you change navigation or footer links, search and replace across all `.html` files. Keep the `<title>`, `<meta name="description">` and the JSON-LD block of a page in sync with its content. When you add a page or a docs section, add it to `sitemap.xml` and to `assets/js/search-index.js` so search can find it.
+
+The brand colour is indigo (`#4f46e5` light, `#818cf8` dark); all colours are CSS variables at the top of `style.css`.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 

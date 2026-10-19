@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-root="">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Aashish Timalsina">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#060913" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AutsPanel">
 <meta property="og:title" content="AutsPanel — Free Open-Source cPanel Alternative for VPS">
@@ -24,11 +24,13 @@
 <meta name="twitter:title" content="AutsPanel — Free Open-Source cPanel Alternative for VPS">
 <meta name="twitter:description" content="Free, open-source (MIT) hosting control panel for Ubuntu &amp; Debian VPS. Deploy Node.js, Next.js, React, Laravel, PHP &amp; WordPress from Git with SSL and backups.">
 <meta name="twitter:image" content="https://auts-tech.github.io/autspanel/assets/img/og-image.png">
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}})();</script>
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="assets/css/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://auts-tech.github.io/autspanel/#org","name":"auts-tech","url":"https://github.com/auts-tech","logo":"https://auts-tech.github.io/autspanel/assets/img/icon-512.png","sameAs":["https://github.com/auts-tech","https://github.com/auts-tech/backup-vps"],"email":"tm.aashish1@gmail.com","telephone":"+9779848077880","founder":{"@id":"https://auts-tech.github.io/autspanel/#aashish"}},{"@type":"Person","@id":"https://auts-tech.github.io/autspanel/#aashish","name":"Aashish Timalsina","url":"https://github.com/aashishtimalsina","sameAs":["https://github.com/aashishtimalsina"],"jobTitle":"Software developer","worksFor":{"@id":"https://auts-tech.github.io/autspanel/#org"}},{"@type":"WebSite","@id":"https://auts-tech.github.io/autspanel/#website","name":"AutsPanel","url":"https://auts-tech.github.io/autspanel/","publisher":{"@id":"https://auts-tech.github.io/autspanel/#org"},"inLanguage":"en"},{"@type":"SoftwareApplication","@id":"https://auts-tech.github.io/autspanel/#software","name":"AutsPanel","alternateName":"AutsPanel hosting control panel","description":"Free, open-source web hosting control panel for Ubuntu and Debian VPS servers.","applicationCategory":"DeveloperApplication","applicationSubCategory":"Web hosting control panel","operatingSystem":"Ubuntu, Debian","url":"https://auts-tech.github.io/autspanel/","downloadUrl":"https://github.com/auts-tech/backup-vps","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"screenshot":"https://auts-tech.github.io/autspanel/assets/img/screenshot-websites.png","author":{"@id":"https://auts-tech.github.io/autspanel/#aashish"},"publisher":{"@id":"https://auts-tech.github.io/autspanel/#org"},"dateModified":"2026-10-19","featureList":"One page per website, Push-to-deploy with rollback, Builds detected for you, Free SSL that renews itself, Node.js & Python apps, PHP, Laravel & WordPress, Databases, Backups & restore, Firewall that never locks you out, SSH & deploy keys, File manager & terminal, Traffic, logs & alerts"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is AutsPanel really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. AutsPanel is open source under the MIT license. There is no paid tier, no per-account or per-domain license, and no feature behind a paywall. You only pay for your VPS."}},{"@type":"Question","name":"Which servers does it run on?","acceptedAnswer":{"@type":"Answer","text":"Ubuntu 20.04, 22.04 and 24.04 LTS and Debian, on any VPS provider (Hetzner, Contabo, DigitalOcean, Linode, AWS Lightsail, Vultr…). It needs root access; 1 GB of RAM is enough for the panel and a few small sites, 2 GB or more is recommended for Node.js builds."}},{"@type":"Question","name":"Can it host Node.js, Next.js and React apps?","acceptedAnswer":{"@type":"Answer","text":"Yes — that is what it is built for. Node.js and Next.js apps run under PM2 behind nginx; React, Vite and Vue apps are built on deploy and served as static files with a single-page-app fallback, so client-side routes never 404."}},{"@type":"Question","name":"Does it support PHP, Laravel and WordPress?","acceptedAnswer":{"@type":"Answer","text":"Yes. Install PHP versions from 5.6 to 8.x side by side, deploy Laravel with Composer and migrations, and install WordPress in one click with its own database."}},{"@type":"Question","name":"Can I move my sites from cPanel or aaPanel?","acceptedAnswer":{"@type":"Answer","text":"Yes. Create the website in AutsPanel, upload your files and import your database dump, then switch the DNS record. The migration guide walks through it step by step."}},{"@type":"Question","name":"How do I update AutsPanel?","acceptedAnswer":{"@type":"Answer","text":"When a new version is published, the panel shows an update notice. Updating pulls the new version, installs dependencies, checks every file and rolls back automatically if anything fails."}},{"@type":"Question","name":"Who makes AutsPanel?","acceptedAnswer":{"@type":"Answer","text":"AutsPanel is developed by Aashish Timalsina and published by auts-tech as a free, community project. Contributions are welcome on GitHub."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://auts-tech.github.io/autspanel/#org","name":"auts-tech","url":"https://github.com/auts-tech","logo":"https://auts-tech.github.io/autspanel/assets/img/icon-512.png","sameAs":["https://github.com/auts-tech","https://github.com/auts-tech/backup-vps"],"email":"tm.aashish1@gmail.com","telephone":"+9779848077880","founder":{"@id":"https://auts-tech.github.io/autspanel/#aashish"}},{"@type":"Person","@id":"https://auts-tech.github.io/autspanel/#aashish","name":"Aashish Timalsina","url":"https://github.com/aashishtimalsina","sameAs":["https://github.com/aashishtimalsina"],"jobTitle":"Software developer","worksFor":{"@id":"https://auts-tech.github.io/autspanel/#org"}},{"@type":"WebSite","@id":"https://auts-tech.github.io/autspanel/#website","name":"AutsPanel","url":"https://auts-tech.github.io/autspanel/","publisher":{"@id":"https://auts-tech.github.io/autspanel/#org"},"inLanguage":"en"},{"@type":"SoftwareApplication","@id":"https://auts-tech.github.io/autspanel/#software","name":"AutsPanel","alternateName":"AutsPanel hosting control panel","description":"Free, open-source web hosting control panel for Ubuntu and Debian VPS servers.","applicationCategory":"DeveloperApplication","applicationSubCategory":"Web hosting control panel","operatingSystem":"Ubuntu, Debian","url":"https://auts-tech.github.io/autspanel/","downloadUrl":"https://github.com/auts-tech/backup-vps","license":"https://opensource.org/licenses/MIT","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"screenshot":"https://auts-tech.github.io/autspanel/assets/img/screenshot-websites.png","author":{"@id":"https://auts-tech.github.io/autspanel/#aashish"},"publisher":{"@id":"https://auts-tech.github.io/autspanel/#org"},"dateModified":"2026-10-19","featureList":"One page per website, Push-to-deploy with rollback, Repository stack detection, Free SSL with auto-renewal, Node.js & Python apps under PM2, PHP, Laravel & WordPress, MariaDB/MySQL databases, Backups to Google Drive, S3 & SFTP, UFW firewall, SSH & deploy keys, File manager & web terminal, Traffic stats, logs & alerts"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is AutsPanel really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. AutsPanel is open source under the MIT license. There is no paid tier, no per-account or per-domain license, and no feature behind a paywall. You only pay for your VPS."}},{"@type":"Question","name":"Which servers does it run on?","acceptedAnswer":{"@type":"Answer","text":"Ubuntu 20.04, 22.04 and 24.04 LTS and Debian, on any VPS provider (Hetzner, Contabo, DigitalOcean, Linode, AWS Lightsail, Vultr…). It needs root access; 1 GB of RAM is enough for the panel and a few small sites, 2 GB or more is recommended for Node.js builds."}},{"@type":"Question","name":"Can it host Node.js, Next.js and React apps?","acceptedAnswer":{"@type":"Answer","text":"Yes — that is what it is built for. Node.js and Next.js apps run under PM2 behind nginx; React, Vite and Vue apps are built on deploy and served as static files with a single-page-app fallback, so client-side routes never 404."}},{"@type":"Question","name":"Does it support PHP, Laravel and WordPress?","acceptedAnswer":{"@type":"Answer","text":"Yes. Install PHP versions from 5.6 to 8.x side by side, deploy Laravel with Composer and migrations, and install WordPress in one click with its own database."}},{"@type":"Question","name":"Can I move my sites from cPanel or aaPanel?","acceptedAnswer":{"@type":"Answer","text":"Yes. Create the website in AutsPanel, upload your files and import your database dump, then switch the DNS record. The migration guide walks through it step by step."}},{"@type":"Question","name":"What happens to my sites if I remove AutsPanel?","acceptedAnswer":{"@type":"Answer","text":"They keep running. AutsPanel manages standard tools — nginx, PM2, PHP-FPM, MariaDB, certbot — and writes ordinary config files, so nothing depends on the panel being installed."}},{"@type":"Question","name":"How do I update AutsPanel?","acceptedAnswer":{"@type":"Answer","text":"When a new version is published, the panel shows an update notice. Updating pulls the new version, installs dependencies, checks every file and rolls back automatically if anything fails."}}]}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -36,178 +38,322 @@
   <div class="container nav">
     <a class="brand" href="index.html" aria-label="AutsPanel home"><span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20 12 4l7 16"/><path d="M8.2 13.5h7.6"/></svg></span>AutsPanel</a>
     <nav class="nav-links" aria-label="Main"><a href="features.html">Features</a><a href="docs/index.html">Docs</a><a href="compare/index.html">Compare</a><a href="about.html">About</a></nav>
-    <div class="nav-cta">
-      <a class="btn" href="https://github.com/auts-tech/backup-vps" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> GitHub</a>
-      <a class="btn btn-primary" href="docs/installation.html">Install free</a>
+    <div class="nav-right">
+      <a class="search-btn" href="docs/index.html" data-search aria-label="Search the documentation"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span class="label">Search docs</span><kbd>⌘K</kbd></a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark theme"><span class="sun"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-2.93 1.41-1.41M17.66 6.34l1.41-1.41M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41"/></svg></span><span class="moon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span></button>
+      <a class="icon-btn" href="https://github.com/auts-tech/backup-vps" rel="noopener" aria-label="AutsPanel on GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+      <a class="btn btn-primary" href="docs/installation.html">Get started</a>
+      <details class="menu">
+        <summary class="icon-btn" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Mobile"><a href="features.html">Features</a><a href="docs/index.html">Docs</a><a href="compare/index.html">Compare</a><a href="about.html">About</a><a href="https://github.com/auts-tech/backup-vps" rel="noopener">GitHub</a><a class="btn btn-primary" href="docs/installation.html">Get started — it's free</a></nav>
+      </details>
     </div>
-    <details class="menu">
-      <summary aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></summary>
-      <nav class="menu-panel" aria-label="Mobile"><a href="features.html">Features</a><a href="docs/index.html">Docs</a><a href="compare/index.html">Compare</a><a href="about.html">About</a><a href="docs/installation.html">Install free</a><a href="https://github.com/auts-tech/backup-vps" rel="noopener">GitHub</a></nav>
-    </details>
   </div>
 </header>
 <main id="main">
 
 <section class="hero">
   <div class="container">
-    <a class="eyebrow" href="https://github.com/auts-tech/backup-vps" rel="noopener"><span class="pill">MIT</span> Open source · free forever · no license fees</a>
-    <h1>The free cPanel alternative built for modern apps</h1>
-    <p class="lead">AutsPanel turns any Ubuntu or Debian VPS into your own hosting platform. Deploy Node.js, Next.js, React, Laravel, PHP and WordPress from Git — with SSL, databases, backups and a firewall — from one clean dashboard.</p>
+    <a class="eyebrow" href="https://github.com/auts-tech/backup-vps" rel="noopener"><span class="pill">MIT</span>Open source · free forever<span class="hide-sm"> · no license fees</span> <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <h1>The free cPanel alternative <br>built for <span class="grad">modern apps</span></h1>
+    <p class="lead">AutsPanel turns any Ubuntu or Debian VPS into your own hosting platform. Deploy Node.js, Next.js, React, Laravel, PHP and WordPress from Git — with SSL, databases, backups and a firewall built in.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary btn-lg" href="docs/installation.html">Install in 5 minutes <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      <a class="btn btn-lg" href="https://github.com/auts-tech/backup-vps" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> Star on GitHub</a>
+      <a class="btn btn-primary btn-lg" href="docs/installation.html">Install in 5 minutes <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      <a class="btn btn-lg" href="https://github.com/auts-tech/backup-vps" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> Star on GitHub</a>
     </div>
     <div class="install-line"><code><span class="prompt">$</span> git clone https://github.com/auts-tech/backup-vps.git /opt/backup-vps && cd /opt/backup-vps && cp .env.example .env && nano .env && sudo bash setup.sh</code><button class="copy" type="button" data-copy="git clone https://github.com/auts-tech/backup-vps.git /opt/backup-vps && cd /opt/backup-vps && cp .env.example .env && nano .env && sudo bash setup.sh">Copy</button></div>
     <div class="hero-badges">
       <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> MIT licensed</span>
       <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Ubuntu &amp; Debian</span>
-      <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Push-to-deploy</span>
-      <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Free SSL</span>
-      <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No per-site pricing</span>
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Unlimited websites</span>
+      <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> No telemetry</span>
     </div>
-    <div class="hero-shot"><figure class="frame" style="margin:0;"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>panel.example.com/#sites</span></div><img src="assets/img/screenshot-websites.png" alt="AutsPanel websites dashboard showing live Node.js, React, Next.js and static sites with Git commits and HTTPS status" width="1440" height="900" fetchpriority="high" decoding="async"></figure></div>
-    <div class="stack-strip" aria-label="Supported stacks">
-      <span class="stack-chip"><span class="dot" style="background:#16a34a"></span>Node.js</span><span class="stack-chip"><span class="dot" style="background:#71717a"></span>Next.js</span><span class="stack-chip"><span class="dot" style="background:#0891b2"></span>React · Vite · Vue</span><span class="stack-chip"><span class="dot" style="background:#dc2626"></span>Laravel</span><span class="stack-chip"><span class="dot" style="background:#4f46e5"></span>PHP 5.6 – 8.x</span><span class="stack-chip"><span class="dot" style="background:#1d4ed8"></span>WordPress</span><span class="stack-chip"><span class="dot" style="background:#ca8a04"></span>Python</span><span class="stack-chip"><span class="dot" style="background:#a1a1aa"></span>Static HTML</span><span class="stack-chip"><span class="dot" style="background:#7c3aed"></span>Docker / any port</span>
+    <div class="hero-visual">
+      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>panel.example.com/#sites</span></div><img src="assets/img/screenshot-websites.png" alt="AutsPanel websites dashboard showing Node.js, Next.js, React and static sites with Git commits and status" width="1440" height="900" fetchpriority="high" decoding="async"></figure>
+      <div class="float-card fc-1" aria-hidden="true"><span class="fc-icon fc-green"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><div><strong>Deployed api.example.com</strong><span>main · a8f1c2e · 38s</span></div></div>
+      <div class="float-card fc-2" aria-hidden="true"><span class="fc-icon fc-brand"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><div><strong>HTTPS active</strong><span>shop.example.com · auto-renews</span></div></div>
+      <div class="float-card fc-3" aria-hidden="true"><span class="fc-icon fc-amber"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></svg></span><div><strong>Backup complete</strong><span>Google Drive · 214 MB</span></div></div>
+      <div class="hero-fade"></div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="trust">
+  <div class="container">
+    <p>Runs the open-source tools you already trust</p>
+    <div class="trust-row"><span>nginx</span><span>PM2</span><span>Let's Encrypt</span><span>PHP-FPM</span><span>MariaDB</span><span>Node.js</span><span>UFW</span><span>rclone</span></div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="stats reveal">
+      <div class="stat"><b class="grad">$0</b><span>license fees — forever</span></div>
+      <div class="stat"><b>Unlimited</b><span>websites and domains per server</span></div>
+      <div class="stat"><b>9</b><span>stacks, from Next.js to WordPress</span></div>
+      <div class="stat"><b>4</b><span>Git hosts with push-to-deploy</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features" style="padding-top:56px;">
   <div class="container">
     <div class="section-head">
-      <span class="kicker">Everything in one panel</span>
+      <span class="kicker"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg> Everything in one panel</span>
       <h2>All the hosting tools — without the hosting bill</h2>
       <p>The features you know from cPanel, Plesk and aaPanel, rebuilt around how developers ship today: Git, environment variables, processes and safe rollbacks.</p>
     </div>
-    <div class="grid grid-3">
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></div><h3>One page per website</h3><p>Domains, code, deployments, .env, the app process, database, backups and logs of a site — together on one page. No more hunting through ten menus.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div><h3>Push-to-deploy with rollback</h3><p>Webhooks for GitHub, GitLab, Gitea and Bitbucket. Every deployment keeps its log, and any earlier commit is one click away.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div><h3>Builds detected for you</h3><p>Paste a repository URL: the framework, build and start commands, web root, port and PHP version are filled in automatically.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Free SSL that renews itself</h3><p>Let's Encrypt certificates with HTTP→HTTPS redirect, a live DNS check before issuing, and automatic renewal.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg></div><h3>Node.js & Python apps</h3><p>Apps run under PM2 with crash restarts. After each deploy AutsPanel checks the app really answers on its port.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>PHP, Laravel & WordPress</h3><p>Several PHP-FPM versions side by side, Composer built in, the Laravel scheduler as a switch, and one-click WordPress.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div><h3>Databases</h3><p>MariaDB/MySQL with users and privileges, a table browser, SQL console, import/export — and existing databases linked to their sites.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></svg></div><h3>Backups & restore</h3><p>Database, files and .env of every site to Google Drive, S3 or SFTP on a schedule — restored with a live log.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><h3>Firewall that never locks you out</h3><p>UFW rules for ports and IPs. SSH and the way you reach the panel are always allowed first.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg></div><h3>SSH & deploy keys</h3><p>Manage login keys and generate the server's deploy key for private repositories — with a connection test.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg></div><h3>File manager & terminal</h3><p>Edit files with syntax highlighting, upload and extract zips, and open a root shell in the browser.</p></div>
-      <div class="card"><div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Traffic, logs & alerts</h3><p>Visitors, top pages and 404s per site, live server stats, and Discord or email alerts for deploys and backups.</p></div>
+    <div class="bento">
+  <div class="card span-4 reveal">
+    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+    <h3>Push to deploy. Roll back in one click.</h3>
+    <p>Signed webhooks for GitHub, GitLab, Gitea and Bitbucket. Every deployment runs as a checklist with a live log and is kept in the history.</p>
+    <div class="mini" aria-hidden="true">
+      <div class="mini-row"><span class="ok"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span class="grow">Pull <b>origin/main</b> → a8f1c2e</span><span class="muted">1.2s</span></div>
+      <div class="mini-row"><span class="ok"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span class="grow">Install dependencies — npm ci</span><span class="muted">14.8s</span></div>
+      <div class="mini-row"><span class="ok"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span class="grow">Build — npm run build</span><span class="muted">19.3s</span></div>
+      <div class="mini-row"><span class="ok"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span class="grow">Restart app — PM2</span><span class="muted">0.9s</span></div>
+      <div class="mini-row"><span class="ok"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><span class="grow">Health check — 127.0.0.1:3000</span><span class="muted">1.6s</span></div>
+      <div class="mini-foot"><span class="tag green"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Deployed in 38s</span><span class="tag"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg> Roll back</span></div>
     </div>
+  </div>
+  <div class="card span-2 reveal">
+    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+    <h3>Free SSL, renewed for you</h3>
+    <p>Let's Encrypt for every domain, with a DNS check first and an HTTPS redirect.</p>
+    <div class="mini" aria-hidden="true">
+      <div class="mini-row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span class="grow">shop.example.com</span><span class="tag green">Secure</span></div>
+      <div class="mini-row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span class="grow">www.shop.example.com</span><span class="tag green">Secure</span></div>
+      <div class="mini-row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span class="grow">api.example.com</span><span class="tag green">Secure</span></div>
+      <div class="mini-foot"><span class="muted" style="font-size:.78rem;">Auto-renewal</span><span class="tag brand">On</span></div>
+    </div>
+  </div>
+  <div class="card span-2 reveal">
+    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></div>
+    <h3>Any stack, detected</h3>
+    <p>Paste a repository: build and start commands, web root, port and PHP version are filled in.</p>
+    <div class="chips"><span class="stack-chip"><span class="dot" style="background:#22c55e"></span>Node.js</span><span class="stack-chip"><span class="dot" style="background:#94a3b8"></span>Next.js</span><span class="stack-chip"><span class="dot" style="background:#06b6d4"></span>React · Vite · Vue</span><span class="stack-chip"><span class="dot" style="background:#ef4444"></span>Laravel</span><span class="stack-chip"><span class="dot" style="background:#6366f1"></span>PHP 5.6 – 8.x</span><span class="stack-chip"><span class="dot" style="background:#3b82f6"></span>WordPress</span><span class="stack-chip"><span class="dot" style="background:#eab308"></span>Python</span><span class="stack-chip"><span class="dot" style="background:#a1a1aa"></span>Static HTML</span><span class="stack-chip"><span class="dot" style="background:#a855f7"></span>Docker / any port</span></div>
+  </div>
+  <div class="card span-2 reveal">
+    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></svg></div>
+    <h3>Backups that restore</h3>
+    <p>Database, files and .env of each site on a schedule — restored with a live log.</p>
+    <div class="mini" aria-hidden="true">
+      <div class="mini-row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg><span class="grow">Google Drive</span><span class="tag green">Connected</span></div>
+      <div class="mini-row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg><span class="grow">Amazon S3 &amp; compatible</span><span class="tag">Optional</span></div>
+      <div class="mini-row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg><span class="grow">SFTP</span><span class="tag">Optional</span></div>
+      <div class="mini-foot"><span style="display:inline-flex;gap:6px;align-items:center;font-size:.8rem;"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Every day at 02:00</span></div>
+    </div>
+  </div>
+  <div class="card span-2 reveal">
+    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+    <h3>A firewall that won't lock you out</h3>
+    <p>UFW rules for ports and IPs. SSH and your way into the panel are allowed first.</p>
+    <div class="mini" aria-hidden="true">
+      <div class="mini-row"><span class="grow"><b>22/tcp</b> · SSH</span><span class="tag green">Allow</span></div>
+      <div class="mini-row"><span class="grow"><b>80, 443/tcp</b> · Web</span><span class="tag green">Allow</span></div>
+      <div class="mini-row"><span class="grow"><b>198.51.100.23</b></span><span class="tag red">Deny</span></div>
+    </div>
+  </div>
+  <div class="card span-3 reveal">
+    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+    <h3>Every PHP version, per website</h3>
+    <p>PHP 5.6 to 8.x side by side, Composer built in, and Laravel's scheduler as a switch.</p>
+    <div class="mini" aria-hidden="true">
+      <div class="versions"><span class="tag">7.4</span><span class="tag">8.1</span><span class="tag">8.2</span><span class="tag brand">8.3</span></div>
+      <div class="mini-row"><span class="grow">shop.example.com · Laravel</span><span class="tag brand">PHP 8.3</span></div>
+      <div class="mini-row"><span class="grow">legacy.example.com · PHP</span><span class="tag">PHP 7.4</span></div>
+    </div>
+  </div>
+  <div class="card span-3 reveal">
+    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
+    <h3>Databases, linked to their sites</h3>
+    <p>MariaDB/MySQL with users, a table browser and SQL console — and existing databases found in your config.</p>
+    <div class="mini" aria-hidden="true">
+      <div class="mini-row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg><span class="grow"><b>shop_db</b> · 24 MB</span><span class="tag brand">shop.example.com</span></div>
+      <div class="mini-row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg><span class="grow"><b>blog_wp</b> · 61 MB</span><span class="tag brand">blog.example.com</span></div>
+      <div class="mini-row"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span class="grow">Found in .env: <b>api_db</b></span><span class="tag green">Link</span></div>
+    </div>
+  </div>
+</div>
+    <div class="tool-list reveal"><div class="tool"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><div><strong>File manager</strong><span>Edit with syntax highlighting, upload, zip and unzip.</span></div></div><div class="tool"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg><div><strong>Web terminal</strong><span>A root shell in the browser over an authenticated WebSocket.</span></div></div><div class="tool"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><div><strong>Email hosting</strong><span>Mailboxes, aliases, DKIM and Roundcube webmail.</span></div></div><div class="tool"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><strong>Cron jobs</strong><span>Schedules with next-run preview, run now and output log.</span></div></div><div class="tool"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><div><strong>Monitoring</strong><span>CPU, RAM, disk, processes, services and open ports.</span></div></div><div class="tool"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><div><strong>Alerts</strong><span>Discord and email for deploys and backups.</span></div></div><div class="tool"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg><div><strong>SSH & deploy keys</strong><span>Login keys and a deploy key for private repositories.</span></div></div><div class="tool"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg><div><strong>REST API</strong><span>Script anything the dashboard does, with an API key.</span></div></div></div>
   </div>
 </section>
 
-<section class="section section-muted" id="how-it-works">
+<section class="section section-muted" id="tour">
   <div class="container">
     <div class="section-head">
-      <span class="kicker">How it works</span>
+      <span class="kicker"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg> Product tour</span>
+      <h2>Every site gets its own control room</h2>
+      <p>Domains, deployments, environment, app, PHP, database, backups and logs of a website live together on one page.</p>
+    </div>
+    <div data-tabs>
+    <div class="tabs" role="tablist" aria-label="Product tour">
+      <button class="tab" type="button" role="tab" id="tab-deploy" aria-controls="panel-deploy" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>Deployments</button><button class="tab" type="button" role="tab" id="tab-new" aria-controls="panel-new" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>New website</button><button class="tab" type="button" role="tab" id="tab-domains" aria-controls="panel-domains" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Domains & SSL</button><button class="tab" type="button" role="tab" id="tab-env" aria-controls="panel-env" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>Environment</button><button class="tab" type="button" role="tab" id="tab-apps" aria-controls="panel-apps" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg>Apps</button><button class="tab" type="button" role="tab" id="tab-php" aria-controls="panel-php" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>PHP & Composer</button><button class="tab" type="button" role="tab" id="tab-traffic" aria-controls="panel-traffic" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Traffic</button>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-deploy" aria-labelledby="tab-deploy">
+      <div>
+        <h3>Deploy on push. Roll back in one click.</h3>
+        <p>Every deployment pulls, builds, restarts and health-checks your app as one job with a live log — and stays in the history, so any earlier commit is a click away.</p>
+        <ul class="checks"><li>Signed webhooks for GitHub, GitLab, Gitea and Bitbucket</li><li>Editable deploy script per website</li><li>Discord and email alerts when a deploy fails</li></ul>
+        <a class="text-link" href="docs/deployments.html">Read the docs <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>panel.example.com/#site/api/deployments</span></div><img src="assets/img/screenshot-deployments.png" alt="Deployment history with commits, triggers, durations and rollback buttons" width="1440" height="900" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-new" aria-labelledby="tab-new">
+      <div>
+        <h3>Paste a repository. The rest is filled in.</h3>
+        <p>AutsPanel inspects the repository before creating anything and recognises Next.js, React, Laravel, PHP, Python and static sites.</p>
+        <ul class="checks"><li>Folder and free port suggested — all editable</li><li>Live DNS check before HTTPS</li><li>Database and .env credentials in the same step</li></ul>
+        <a class="text-link" href="docs/websites.html">Read the docs <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>panel.example.com/#new-site</span></div><img src="assets/img/screenshot-new-website.png" alt="New website wizard that detected a React project and filled in folder, web root and build command" width="1440" height="900" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-domains" aria-labelledby="tab-domains">
+      <div>
+        <h3>Domains and HTTPS without config files.</h3>
+        <p>Add domains and aliases, see whether each one points to your server, and issue a free certificate. Every nginx change is tested and rolled back if it would fail.</p>
+        <ul class="checks"><li>Let's Encrypt with automatic renewal</li><li>Take a site offline, change web root or upload limit</li><li>Full nginx editor for advanced setups</li></ul>
+        <a class="text-link" href="docs/domains-ssl.html">Read the docs <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>panel.example.com/#site/shop/domains</span></div><img src="assets/img/screenshot-domains-ssl.png" alt="Domains and SSL tab with DNS status per domain and HTTPS settings" width="1440" height="900" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-env" aria-labelledby="tab-env">
+      <div>
+        <h3>Edit .env safely.</h3>
+        <p>A table with secrets masked, or the raw file. Comments and order are kept, and keys missing from .env.example are pointed out.</p>
+        <ul class="checks"><li>Secrets hidden until revealed</li><li>Save & restart, or Save & cache config for Laravel</li><li>Database credentials written for you</li></ul>
+        <a class="text-link" href="docs/websites.html#env">Read the docs <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>panel.example.com/#site/api/env</span></div><img src="assets/img/screenshot-environment.png" alt="Environment variables editor with masked secret values" width="1440" height="900" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-apps" aria-labelledby="tab-apps">
+      <div>
+        <h3>Processes that stay up.</h3>
+        <p>Node.js, Next.js and Python apps run under PM2, restart if they crash and come back after a reboot. Change the start command or port — nginx follows.</p>
+        <ul class="checks"><li>Status, uptime, CPU, memory and restarts</li><li>Output and error logs</li><li>Crash output shown right after a deploy</li></ul>
+        <a class="text-link" href="docs/websites.html#app">Read the docs <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>panel.example.com/#site/api/app</span></div><img src="assets/img/screenshot-app.png" alt="App tab with PM2 process status and output log" width="1440" height="900" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-php" aria-labelledby="tab-php">
+      <div>
+        <h3>Every PHP version, side by side.</h3>
+        <p>Install PHP 5.6 to 8.x, pick a version per website, manage extensions and php.ini, and run Composer with live output.</p>
+        <ul class="checks"><li>Per-site PHP-FPM version</li><li>Checksum-verified Composer</li><li>Laravel scheduler as a switch</li></ul>
+        <a class="text-link" href="docs/php-composer.html">Read the docs <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>panel.example.com/#php</span></div><img src="assets/img/screenshot-php-composer.png" alt="PHP and Composer page with installed versions and the Composer runner" width="1440" height="900" loading="lazy" decoding="async"></figure>
+    </div>
+    <div class="tab-panel" role="tabpanel" id="panel-traffic" aria-labelledby="tab-traffic">
+      <div>
+        <h3>Know what your sites are doing.</h3>
+        <p>Requests, visitors, bandwidth, top pages, referrers and 404s per website — straight from the nginx access log, no tracking script.</p>
+        <ul class="checks"><li>Last 24 hours, 7 or 30 days</li><li>Access, error and app logs</li><li>Disk usage per site</li></ul>
+        <a class="text-link" href="docs/websites.html#page">Read the docs <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>panel.example.com/#site/shop/logs</span></div><img src="assets/img/screenshot-traffic.png" alt="Traffic statistics with requests per day, visitors, top pages and referrers" width="1440" height="900" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="container how">
+    <div>
+      <span class="kicker"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg> How it works</span>
       <h2>From a fresh VPS to a live site in minutes</h2>
-      <p>AutsPanel is a lightweight Node.js service that drives the standard tools you would use by hand — nginx, PM2, PHP-FPM, MariaDB, certbot, UFW — and keeps them consistent. <a href="docs/how-it-works.html">Read the architecture →</a></p>
+      <p style="color:var(--text-2);margin-bottom:24px;">AutsPanel is one lightweight Node.js service that drives standard tools — nginx, PM2, PHP-FPM, MariaDB, certbot, UFW — and keeps them consistent. <a href="docs/how-it-works.html" style="color:var(--brand-text);font-weight:600;">Read the architecture</a>.</p>
+      <div class="steps">
+        <div class="step"><h3>Install</h3><p>Run the installer on a fresh Ubuntu or Debian server and open the dashboard on port 9090.</p></div>
+        <div class="step"><h3>Create a website</h3><p>Paste a Git URL or pick WordPress. Folder, port, build and start commands are suggested.</p></div>
+        <div class="step"><h3>Push your code</h3><p>A webhook deploys every push. Watch the live log; roll back with one click.</p></div>
+        <div class="step"><h3>Relax</h3><p>Certificates renew, backups run on schedule, crashed apps restart, alerts tell you if anything fails.</p></div>
+      </div>
     </div>
-    <div class="steps">
-      <div class="step"><h3>Install</h3><p>Run the installer on a fresh Ubuntu or Debian server and open the dashboard on port 9090.</p></div>
-      <div class="step"><h3>Create a website</h3><p>Paste a Git URL or pick WordPress. Folder, port, build and start commands are suggested for you.</p></div>
-      <div class="step"><h3>Push your code</h3><p>A webhook deploys every push to your branch. Watch the live log; roll back with one click.</p></div>
-      <div class="step"><h3>Relax</h3><p>Certificates renew, backups run on schedule, crashed apps restart and you get an alert if anything fails.</p></div>
-    </div>
+    <div class="terminal" role="img" aria-label="Terminal running the AutsPanel installer, ending with the dashboard URL on port 9090">
+  <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>root@vps — ssh</span></div>
+  <div class="term-body" aria-hidden="true"><div class="term-line" style="--i:0"><span class="t-prompt">$</span> git clone https://github.com/auts-tech/backup-vps.git /opt/backup-vps</div><div class="term-line" style="--i:1"><span class="t-prompt">$</span> cd /opt/backup-vps &amp;&amp; cp .env.example .env &amp;&amp; nano .env</div><div class="term-line" style="--i:2"><span class="t-prompt">$</span> sudo bash setup.sh</div><div class="term-line" style="--i:3"><span class="t-dim">[1/7]</span> Updating package index...</div><div class="term-line" style="--i:4"><span class="t-dim">[2/7]</span> Installing rclone, jq, curl, git, gzip, msmtp, tar, cron, zip, build tools...</div><div class="term-line" style="--i:5"><span class="t-dim">[3/7]</span> Checking Node.js installation...</div><div class="term-line" style="--i:6"><span class="t-dim">[4/7]</span> Installing Node dependencies in server/...</div><div class="term-line" style="--i:7"><span class="t-dim">[5/7]</span> Creating system directories &amp; setting permissions...</div><div class="term-line" style="--i:8"><span class="t-dim">[6/7]</span> Configuring systemd service (vps-backup-manager)...</div><div class="term-line" style="--i:9"><span class="t-dim">[7/7]</span> Verifying service...</div><div class="term-line" style="--i:10"> </div><div class="term-line" style="--i:11">  <span class="t-ok">🎉 Setup Complete &amp; Service Running!</span></div><div class="term-line" style="--i:12">  🌐 Dashboard URL: <span class="t-link">http://203.0.113.10:9090</span></div><div class="term-line" style="--i:13"><span class="t-prompt">$</span> <span class="cursor"></span></div></div>
+</div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="showcase">
-      <div class="showcase-text">
-        <span class="kicker">Deployments</span>
-        <h2>Deploy on push. Roll back in one click.</h2>
-        <p>Connect GitHub, GitLab, Gitea or Bitbucket with a signed webhook. Every deployment runs as a job with a step-by-step checklist and full log, and is kept in the history.</p>
-        <ul class="checks">
-          <li>Pull, build, restart and health-check in one pipeline</li>
-          <li>Editable deploy script with your site's PHP, Node and port</li>
-          <li>Roll back to any earlier commit — the next push moves forward again</li>
-          <li>Discord and email alerts for successful and failed deploys</li>
-        </ul>
-      </div>
-      <figure class="frame" style="margin:0;"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>panel.example.com</span></div><img src="assets/img/screenshot-deployments.png" alt="Deployment history with commits, triggers, durations, rollback buttons and the deploy-on-push webhook settings" width="1440" height="900" loading="lazy" decoding="async"></figure>
-    </div>
-    <div class="showcase reverse">
-      <div class="showcase-text">
-        <span class="kicker">New website</span>
-        <h2>Paste a repository. Everything else is filled in.</h2>
-        <p>AutsPanel inspects your repository before creating anything: it recognises Next.js, React, Laravel, PHP, Python and static sites, and suggests the build command, start command, web root, a free port and the right PHP version.</p>
-        <ul class="checks">
-          <li>Folder <code>/var/www/&lt;name&gt;</code> and port chosen automatically — all editable</li>
-          <li>Live DNS check tells you when HTTPS can be issued</li>
-          <li>Database and <code>.env</code> credentials created in the same step</li>
-          <li>One-click WordPress with admin account, no setup screen</li>
-        </ul>
-      </div>
-      <figure class="frame" style="margin:0;"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>panel.example.com</span></div><img src="assets/img/screenshot-new-website.png" alt="New website wizard that detected a React project from a Git repository and filled in the folder, web root and build commands" width="1440" height="900" loading="lazy" decoding="async"></figure>
-    </div>
-    <div class="showcase">
-      <div class="showcase-text">
-        <span class="kicker">Domains &amp; SSL</span>
-        <h2>Domains, HTTPS and nginx without the config files</h2>
-        <p>Add domains and aliases, see whether each one already points to your server, and issue a free Let's Encrypt certificate. Every nginx change is tested with <code>nginx -t</code> and rolled back automatically if it would break anything.</p>
-        <ul class="checks">
-          <li>Automatic HTTPS redirect and renewal</li>
-          <li>Take a site offline or change its web root and upload limit</li>
-          <li>Full nginx config editor for advanced setups</li>
-        </ul>
-      </div>
-      <figure class="frame" style="margin:0;"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>panel.example.com</span></div><img src="assets/img/screenshot-domains-ssl.png" alt="Domains and SSL tab with DNS status per domain, HTTPS issuing and web server settings" width="1440" height="900" loading="lazy" decoding="async"></figure>
-    </div>
-    <div class="showcase reverse">
-      <div class="showcase-text">
-        <span class="kicker">Insights</span>
-        <h2>Know what your sites are doing</h2>
-        <p>Requests, visitors, bandwidth, top pages, referrers and 404s per website — straight from the nginx access log, no tracking script needed. App output and error logs are one click away.</p>
-      </div>
-      <figure class="frame" style="margin:0;"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>panel.example.com</span></div><img src="assets/img/screenshot-traffic.png" alt="Traffic statistics for a website with requests per day, visitors, bandwidth, top pages and referrers" width="1440" height="900" loading="lazy" decoding="async"></figure>
-    </div>
-  </div>
-</section>
-
-<section class="section section-muted">
+<section class="section section-muted" id="compare">
   <div class="container">
     <div class="section-head">
-      <span class="kicker">Compare</span>
+      <span class="kicker"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg> Compare</span>
       <h2>Why pay per account for your own server?</h2>
       <p>Commercial panels are licensed by accounts or domains. AutsPanel is MIT-licensed and free for unlimited websites.</p>
     </div>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Panel</th><th>Price model</th><th>License</th><th>Web server</th></tr></thead>
-        <tbody>
-          <tr><td class="us"><strong>AutsPanel</strong></td><td class="us yes">Free, unlimited sites</td><td class="us">MIT (open source)</td><td class="us">nginx</td></tr>
-          <tr><td>cPanel &amp; WHM</td><td>Paid monthly license, priced by number of accounts</td><td>Proprietary</td><td>Apache (NGINX optional)</td></tr>
-          <tr><td>Plesk</td><td>Paid license per edition, limited by domains</td><td>Proprietary</td><td>Apache + nginx</td></tr>
-          <tr><td>aaPanel</td><td>Free, with a paid Pro tier</td><td>Free core</td><td>nginx / Apache / OpenLiteSpeed</td></tr>
-          <tr><td>CyberPanel</td><td>Free core, paid add-ons</td><td>GPL-3.0</td><td>OpenLiteSpeed</td></tr>
-          <tr><td>HestiaCP</td><td>Free</td><td>GPL-3.0</td><td>nginx (+ Apache)</td></tr>
-        </tbody>
-      </table>
+    <div class="plans">
+      <div class="card plan reveal">
+        <h3>cPanel &amp; WHM</h3>
+        <div class="price">Paid <small>monthly license</small></div>
+        <ul><li>Priced by number of accounts</li><li>Proprietary, closed source</li><li>Git deploys through .cpanel.yml</li><li>Best for selling shared hosting</li></ul>
+        <a class="text-link" href="compare/cpanel-alternative.html">AutsPanel vs cPanel <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <div class="card plan featured reveal">
+        <span class="badge">Free forever</span>
+        <h3>AutsPanel</h3>
+        <div class="price"><span class="grad">$0</span> <small>unlimited websites</small></div>
+        <ul><li>MIT open source — no paid tier</li><li>Push-to-deploy with rollback built in</li><li>Node.js, React, Laravel, PHP &amp; WordPress</li><li>SSL, backups, firewall and databases included</li></ul>
+        <a class="btn btn-primary" href="docs/installation.html">Install AutsPanel <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+      </div>
+      <div class="card plan reveal">
+        <h3>Plesk</h3>
+        <div class="price">Paid <small>license per edition</small></div>
+        <ul><li>Web Admin up to 10 domains, Web Pro up to 30</li><li>Proprietary, closed source</li><li>Git and Node.js through extensions</li><li>Best for Windows servers</li></ul>
+        <a class="text-link" href="compare/plesk-alternative.html">AutsPanel vs Plesk <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
     </div>
-    <p class="note">Based on each vendor's public information in October 2026 — prices and editions change, so check the vendor. <a href="compare/index.html">See the full comparison →</a></p>
+    <div class="compare-links"><a href="compare/aapanel-alternative.html">AutsPanel vs aaPanel</a><a href="compare/index.html">Full comparison incl. CyberPanel, HestiaCP &amp; CloudPanel</a></div>
+    <p class="note" style="text-align:center;">Based on each vendor's public information in October 2026 — check the vendor for current prices and editions.</p>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="open-source">
+  <div class="container oss">
+    <div class="reveal">
+      <span class="kicker"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Open source</span>
+      <h2>Built in the open. Free for everyone.</h2>
+      <p style="color:var(--text-2);">Use AutsPanel for personal sites, client work or your company — no paid tier, no license server, no telemetry. Read every line, change what you need, and contribute back.</p>
+      <ul class="checks">
+        <li>Plain Node.js and vanilla JavaScript — no build step</li>
+        <li>Ordinary nginx, PM2 and PHP configs: remove the panel and your sites keep running</li>
+        <li>Issues, ideas and pull requests welcome</li>
+      </ul>
+    </div>
+    <div class="card repo-card reveal">
+      <div class="repo-name"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> auts-tech / backup-vps</div>
+      <p>The AutsPanel source code: a free, open-source hosting control panel for Ubuntu &amp; Debian VPS.</p>
+      <div class="repo-meta"><span class="tag brand">MIT License</span><span class="tag">Node.js</span><span class="tag">Vanilla JS</span><span class="tag">Ubuntu · Debian</span></div>
+      <div class="hero-actions" style="justify-content:flex-start;margin:0;">
+        <a class="btn btn-primary" href="https://github.com/auts-tech/backup-vps" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Star on GitHub</a>
+        <a class="btn" href="https://github.com/auts-tech/backup-vps/issues" rel="noopener">Report an issue</a>
+      </div>
+      <div class="dev"><span class="avatar" aria-hidden="true">AT</span><span>Created by <a href="https://github.com/aashishtimalsina" rel="noopener author"><strong>Aashish Timalsina</strong></a> · published by <a href="https://github.com/auts-tech" rel="noopener">auts-tech</a></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted" id="faq">
   <div class="container">
     <div class="section-head">
       <span class="kicker">FAQ</span>
       <h2>Questions, answered</h2>
     </div>
-    <div class="faq"><details open><summary>Is AutsPanel really free?</summary><p>Yes. AutsPanel is open source under the MIT license. There is no paid tier, no per-account or per-domain license, and no feature behind a paywall. You only pay for your VPS.</p></details><details><summary>Which servers does it run on?</summary><p>Ubuntu 20.04, 22.04 and 24.04 LTS and Debian, on any VPS provider (Hetzner, Contabo, DigitalOcean, Linode, AWS Lightsail, Vultr…). It needs root access; 1 GB of RAM is enough for the panel and a few small sites, 2 GB or more is recommended for Node.js builds.</p></details><details><summary>Can it host Node.js, Next.js and React apps?</summary><p>Yes — that is what it is built for. Node.js and Next.js apps run under PM2 behind nginx; React, Vite and Vue apps are built on deploy and served as static files with a single-page-app fallback, so client-side routes never 404.</p></details><details><summary>Does it support PHP, Laravel and WordPress?</summary><p>Yes. Install PHP versions from 5.6 to 8.x side by side, deploy Laravel with Composer and migrations, and install WordPress in one click with its own database.</p></details><details><summary>Can I move my sites from cPanel or aaPanel?</summary><p>Yes. Create the website in AutsPanel, upload your files and import your database dump, then switch the DNS record. The <a href="compare/cpanel-alternative.html#migrate">migration guide</a> walks through it step by step.</p></details><details><summary>How do I update AutsPanel?</summary><p>When a new version is published, the panel shows an update notice. Updating pulls the new version, installs dependencies, checks every file and rolls back automatically if anything fails.</p></details><details><summary>Who makes AutsPanel?</summary><p>AutsPanel is developed by <a href="https://github.com/aashishtimalsina">Aashish Timalsina</a> and published by <a href="https://github.com/auts-tech">auts-tech</a> as a free, community project. Contributions are welcome on GitHub.</p></details></div>
+    <div class="faq"><details open><summary>Is AutsPanel really free?</summary><p>Yes. AutsPanel is open source under the MIT license. There is no paid tier, no per-account or per-domain license, and no feature behind a paywall. You only pay for your VPS.</p></details><details><summary>Which servers does it run on?</summary><p>Ubuntu 20.04, 22.04 and 24.04 LTS and Debian, on any VPS provider (Hetzner, Contabo, DigitalOcean, Linode, AWS Lightsail, Vultr…). It needs root access; 1 GB of RAM is enough for the panel and a few small sites, 2 GB or more is recommended for Node.js builds.</p></details><details><summary>Can it host Node.js, Next.js and React apps?</summary><p>Yes — that is what it is built for. Node.js and Next.js apps run under PM2 behind nginx; React, Vite and Vue apps are built on deploy and served as static files with a single-page-app fallback, so client-side routes never 404.</p></details><details><summary>Does it support PHP, Laravel and WordPress?</summary><p>Yes. Install PHP versions from 5.6 to 8.x side by side, deploy Laravel with Composer and migrations, and install WordPress in one click with its own database.</p></details><details><summary>Can I move my sites from cPanel or aaPanel?</summary><p>Yes. Create the website in AutsPanel, upload your files and import your database dump, then switch the DNS record. The <a href="compare/cpanel-alternative.html#migrate">migration guide</a> walks through it step by step.</p></details><details><summary>What happens to my sites if I remove AutsPanel?</summary><p>They keep running. AutsPanel manages standard tools — nginx, PM2, PHP-FPM, MariaDB, certbot — and writes ordinary config files, so nothing depends on the panel being installed.</p></details><details><summary>How do I update AutsPanel?</summary><p>When a new version is published, the panel shows an update notice. Updating pulls the new version, installs dependencies, checks every file and rolls back automatically if anything fails.</p></details></div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section">
   <div class="container">
-    <div class="cta">
+    <div class="cta reveal">
       <h2>Your server. Your sites. No license fees.</h2>
       <p>Install AutsPanel on a fresh VPS and deploy your first app in minutes. Free and open source, forever.</p>
       <div class="hero-actions" style="margin:0;">
-        <a class="btn btn-primary btn-lg" href="docs/installation.html">Get started</a>
-        <a class="btn btn-ghost btn-lg" href="https://github.com/auts-tech/backup-vps" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View source</a>
+        <a class="btn btn-primary btn-lg" href="docs/installation.html">Get started <span class="arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+        <a class="btn btn-ghost btn-lg" href="docs/index.html">Read the docs</a>
       </div>
     </div>
   </div>
@@ -218,8 +364,11 @@
     <div class="footer-grid">
       <div class="footer-about">
         <a class="brand" href="index.html"><span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20 12 4l7 16"/><path d="M8.2 13.5h7.6"/></svg></span>AutsPanel</a>
-        <p style="margin-top:14px;">The free, open-source hosting control panel for Ubuntu &amp; Debian VPS. Deploy apps from Git with SSL, databases, backups and a firewall.</p>
-        <p><a href="mailto:tm.aashish1@gmail.com">tm.aashish1@gmail.com</a></p>
+        <p style="margin-top:16px;">The free, open-source hosting control panel for Ubuntu &amp; Debian VPS. Deploy apps from Git with SSL, databases, backups and a firewall.</p>
+        <div class="footer-social">
+          <a class="icon-btn" href="https://github.com/auts-tech/backup-vps" rel="noopener" aria-label="Source code on GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+          <a class="icon-btn" href="mailto:tm.aashish1@gmail.com" aria-label="Email tm.aashish1@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+        </div>
       </div>
       <div>
         <h4>Product</h4>
@@ -245,17 +394,22 @@
         <ul>
           <li><a href="https://github.com/auts-tech/backup-vps" rel="noopener">Source code</a></li>
           <li><a href="https://github.com/auts-tech/backup-vps/issues" rel="noopener">Report a bug</a></li>
-          <li><a href="https://github.com/auts-tech" rel="noopener">auts-tech on GitHub</a></li>
+          <li><a href="https://github.com/auts-tech" rel="noopener">auts-tech</a></li>
           <li><a href="about.html">About &amp; contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 <a href="https://github.com/auts-tech" rel="noopener">auts-tech</a> · Released under the <a href="https://github.com/auts-tech/backup-vps/blob/main/LICENSE" rel="noopener">MIT License</a></span>
-      <span>Developed by <a href="https://github.com/aashishtimalsina" rel="noopener author">Aashish Timalsina</a></span>
+      <span>© 2026 <a href="https://github.com/auts-tech" rel="noopener">auts-tech</a> · Free and open source under the <a href="https://github.com/auts-tech/backup-vps/blob/main/LICENSE" rel="noopener">MIT License</a></span>
+      <span>Built by <a href="https://github.com/aashishtimalsina" rel="noopener author">Aashish Timalsina</a></span>
     </div>
   </div>
 </footer>
+<dialog class="search-dialog" aria-label="Search the documentation">
+  <div class="search-input-row"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input type="search" placeholder="Search docs — e.g. SSL, webhook, Laravel" aria-label="Search" autocomplete="off" spellcheck="false"><kbd>Esc</kbd></div>
+  <ul class="search-results" role="listbox"></ul>
+</dialog>
+<script src="assets/js/search-index.js" defer></script>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>

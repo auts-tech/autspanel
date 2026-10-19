@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-root="../">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Aashish Timalsina">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#060913" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="AutsPanel">
 <meta property="og:title" content="Free Plesk Alternative for Linux VPS — AutsPanel (Open Source)">
@@ -24,6 +24,8 @@
 <meta name="twitter:title" content="Free Plesk Alternative for Linux VPS — AutsPanel (Open Source)">
 <meta name="twitter:description" content="A free Plesk alternative for Linux VPS: MIT-licensed, unlimited domains, Git deploys with rollback, Node.js, PHP, WordPress, SSL, databases and backups.">
 <meta name="twitter:image" content="https://auts-tech.github.io/autspanel/assets/img/og-image.png">
+<script>(function(){var d=document.documentElement;d.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")d.setAttribute("data-theme",t)}catch(e){}})();</script>
+<link rel="preload" href="../assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
@@ -36,14 +38,16 @@
   <div class="container nav">
     <a class="brand" href="../index.html" aria-label="AutsPanel home"><span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20 12 4l7 16"/><path d="M8.2 13.5h7.6"/></svg></span>AutsPanel</a>
     <nav class="nav-links" aria-label="Main"><a href="../features.html">Features</a><a href="../docs/index.html">Docs</a><a href="../compare/index.html" aria-current="page">Compare</a><a href="../about.html">About</a></nav>
-    <div class="nav-cta">
-      <a class="btn" href="https://github.com/auts-tech/backup-vps" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> GitHub</a>
-      <a class="btn btn-primary" href="../docs/installation.html">Install free</a>
+    <div class="nav-right">
+      <a class="search-btn" href="../docs/index.html" data-search aria-label="Search the documentation"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span class="label">Search docs</span><kbd>⌘K</kbd></a>
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch between light and dark theme"><span class="sun"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-2.93 1.41-1.41M17.66 6.34l1.41-1.41M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41"/></svg></span><span class="moon"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span></button>
+      <a class="icon-btn" href="https://github.com/auts-tech/backup-vps" rel="noopener" aria-label="AutsPanel on GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+      <a class="btn btn-primary" href="../docs/installation.html">Get started</a>
+      <details class="menu">
+        <summary class="icon-btn" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></summary>
+        <nav class="menu-panel" aria-label="Mobile"><a href="../features.html">Features</a><a href="../docs/index.html">Docs</a><a href="../compare/index.html" aria-current="page">Compare</a><a href="../about.html">About</a><a href="https://github.com/auts-tech/backup-vps" rel="noopener">GitHub</a><a class="btn btn-primary" href="../docs/installation.html">Get started — it's free</a></nav>
+      </details>
     </div>
-    <details class="menu">
-      <summary aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></summary>
-      <nav class="menu-panel" aria-label="Mobile"><a href="../features.html">Features</a><a href="../docs/index.html">Docs</a><a href="../compare/index.html" aria-current="page">Compare</a><a href="../about.html">About</a><a href="../docs/installation.html">Install free</a><a href="https://github.com/auts-tech/backup-vps" rel="noopener">GitHub</a></nav>
-    </details>
   </div>
 </header>
 <main id="main">
@@ -51,7 +55,7 @@
 
 <section class="page-head">
   <div class="container">
-    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">AutsPanel</a> / <a href="../compare/index.html">Compare</a> / <span>Plesk alternative</span></nav>
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">AutsPanel</a><span aria-hidden="true">/</span><a href="../compare/index.html">Compare</a><span aria-hidden="true">/</span><span>Plesk alternative</span></nav>
     <h1>A free Plesk alternative for Linux servers</h1>
     <p>Plesk editions are licensed per server and limited by domains — Web Admin up to 10, Web Pro up to 30. AutsPanel has no domain limit and no license: install it and host as many sites as your VPS can handle.</p>
     <div class="hero-actions" style="margin:28px 0 0;">
@@ -84,7 +88,7 @@
         <h2>Where to find what you used in Plesk</h2>
         <p>Most of the screens you know have a direct equivalent. The difference: in AutsPanel they are grouped by website, so everything for one site lives on one page.</p>
       </div>
-      <figure class="frame" style="margin:0;"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>panel.example.com</span></div><img src="../assets/img/screenshot-domains-ssl.png" alt="AutsPanel domains and SSL management for a website" width="1440" height="900" loading="lazy" decoding="async"></figure>
+      <figure class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>panel.example.com</span></div><img src="../assets/img/screenshot-domains-ssl.png" alt="AutsPanel domains and SSL management for a website" width="1440" height="900" loading="lazy" decoding="async"></figure>
     </div>
     <div class="table-wrap"><table>
 <thead><tr><th>In Plesk</th><th class="us">In AutsPanel</th></tr></thead>
@@ -95,7 +99,7 @@
 <section class="section section-muted" id="migrate">
   <div class="container">
     <div class="section-head"><span class="kicker">Migration</span><h2>How to move from Plesk to AutsPanel</h2><p>Plan for about 15–30 minutes per website. Nothing changes for visitors until you switch DNS.</p></div>
-    <div class="steps"><div class="step"><h3>Back up</h3><p>In Plesk, download the website files (File Manager → archive) and export each database dump from Databases.</p></div><div class="step"><h3>Install AutsPanel</h3><p>Install on a new VPS (or the same one after the move) with the one-line installer, then log in on port 9090.</p></div><div class="step"><h3>Create the website</h3><p>Websites → New Website. Choose Git for apps, WordPress for a fresh WordPress, or an empty PHP/static site for files you upload.</p></div><div class="step"><h3>Copy files & database</h3><p>Upload a zip in the File manager and extract it into the web root, then import your .sql dump under Databases and link it to the site.</p></div><div class="step"><h3>Test, then switch DNS</h3><p>Check the site with a hosts-file entry, lower the DNS TTL, point the A record to the new server and issue free HTTPS.</p></div></div>
+    <div class="steps" style="max-width:760px;margin:0 auto;"><div class="step"><h3>Back up</h3><p>In Plesk, download the website files (File Manager → archive) and export each database dump from Databases.</p></div><div class="step"><h3>Install AutsPanel</h3><p>Install on a new VPS (or the same one after the move) with the one-line installer, then log in on port 9090.</p></div><div class="step"><h3>Create the website</h3><p>Websites → New Website. Choose Git for apps, WordPress for a fresh WordPress, or an empty PHP/static site for files you upload.</p></div><div class="step"><h3>Copy files & database</h3><p>Upload a zip in the File manager and extract it into the web root, then import your .sql dump under Databases and link it to the site.</p></div><div class="step"><h3>Test, then switch DNS</h3><p>Check the site with a hosts-file entry, lower the DNS TTL, point the A record to the new server and issue free HTTPS.</p></div></div>
     <div class="callout tip" style="max-width:820px;margin:32px auto 0;"><p><strong>Tip:</strong> after importing a database, open the website's <em>Database</em> tab. AutsPanel reads the credentials from the site's <code>.env</code> or <code>wp-config.php</code> and offers to link the database in one click, so backups include it from then on.</p></div>
   </div>
 </section>
@@ -137,8 +141,11 @@
     <div class="footer-grid">
       <div class="footer-about">
         <a class="brand" href="../index.html"><span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20 12 4l7 16"/><path d="M8.2 13.5h7.6"/></svg></span>AutsPanel</a>
-        <p style="margin-top:14px;">The free, open-source hosting control panel for Ubuntu &amp; Debian VPS. Deploy apps from Git with SSL, databases, backups and a firewall.</p>
-        <p><a href="mailto:tm.aashish1@gmail.com">tm.aashish1@gmail.com</a></p>
+        <p style="margin-top:16px;">The free, open-source hosting control panel for Ubuntu &amp; Debian VPS. Deploy apps from Git with SSL, databases, backups and a firewall.</p>
+        <div class="footer-social">
+          <a class="icon-btn" href="https://github.com/auts-tech/backup-vps" rel="noopener" aria-label="Source code on GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+          <a class="icon-btn" href="mailto:tm.aashish1@gmail.com" aria-label="Email tm.aashish1@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+        </div>
       </div>
       <div>
         <h4>Product</h4>
@@ -164,17 +171,22 @@
         <ul>
           <li><a href="https://github.com/auts-tech/backup-vps" rel="noopener">Source code</a></li>
           <li><a href="https://github.com/auts-tech/backup-vps/issues" rel="noopener">Report a bug</a></li>
-          <li><a href="https://github.com/auts-tech" rel="noopener">auts-tech on GitHub</a></li>
+          <li><a href="https://github.com/auts-tech" rel="noopener">auts-tech</a></li>
           <li><a href="../about.html">About &amp; contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 <a href="https://github.com/auts-tech" rel="noopener">auts-tech</a> · Released under the <a href="https://github.com/auts-tech/backup-vps/blob/main/LICENSE" rel="noopener">MIT License</a></span>
-      <span>Developed by <a href="https://github.com/aashishtimalsina" rel="noopener author">Aashish Timalsina</a></span>
+      <span>© 2026 <a href="https://github.com/auts-tech" rel="noopener">auts-tech</a> · Free and open source under the <a href="https://github.com/auts-tech/backup-vps/blob/main/LICENSE" rel="noopener">MIT License</a></span>
+      <span>Built by <a href="https://github.com/aashishtimalsina" rel="noopener author">Aashish Timalsina</a></span>
     </div>
   </div>
 </footer>
+<dialog class="search-dialog" aria-label="Search the documentation">
+  <div class="search-input-row"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input type="search" placeholder="Search docs — e.g. SSL, webhook, Laravel" aria-label="Search" autocomplete="off" spellcheck="false"><kbd>Esc</kbd></div>
+  <ul class="search-results" role="listbox"></ul>
+</dialog>
+<script src="../assets/js/search-index.js" defer></script>
 <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
