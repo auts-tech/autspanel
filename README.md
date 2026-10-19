@@ -74,4 +74,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 ## License
 
 [MIT](LICENSE) © 2026 auts-tech and Aashish Timalsina. cPanel, Plesk, aaPanel and the other product names mentioned on the site are trademarks of their respective owners.
-# autspanel
