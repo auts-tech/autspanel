@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiple PHP Versions &amp; Composer on a VPS — AutsPanel Docs</title>
+<meta name="description" content="Run PHP 5.6 to 8.x side by side with AutsPanel: choose a PHP-FPM version per website, manage extensions and php.ini, and run Composer with any version.">
+<link rel="canonical" href="https://auts-tech.github.io/autspanel/docs/php-composer.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Aashish Timalsina">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AutsPanel">
+<meta property="og:title" content="Multiple PHP Versions &amp; Composer on a VPS — AutsPanel Docs">
+<meta property="og:description" content="Run PHP 5.6 to 8.x side by side with AutsPanel: choose a PHP-FPM version per website, manage extensions and php.ini, and run Composer with any version.">
+<meta property="og:url" content="https://auts-tech.github.io/autspanel/docs/php-composer.html">
+<meta property="og:image" content="https://auts-tech.github.io/autspanel/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AutsPanel — free open-source hosting control panel">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Multiple PHP Versions &amp; Composer on a VPS — AutsPanel Docs">
+<meta name="twitter:description" content="Run PHP 5.6 to 8.x side by side with AutsPanel: choose a PHP-FPM version per website, manage extensions and php.ini, and run Composer with any version.">
+<meta name="twitter:image" content="https://auts-tech.github.io/autspanel/assets/img/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://auts-tech.github.io/autspanel/#org","name":"auts-tech","url":"https://github.com/auts-tech","logo":"https://auts-tech.github.io/autspanel/assets/img/icon-512.png","sameAs":["https://github.com/auts-tech","https://github.com/auts-tech/backup-vps"],"email":"tm.aashish1@gmail.com","telephone":"+9779848077880","founder":{"@id":"https://auts-tech.github.io/autspanel/#aashish"}},{"@type":"Person","@id":"https://auts-tech.github.io/autspanel/#aashish","name":"Aashish Timalsina","url":"https://github.com/aashishtimalsina","sameAs":["https://github.com/aashishtimalsina"],"jobTitle":"Software developer","worksFor":{"@id":"https://auts-tech.github.io/autspanel/#org"}},{"@type":"TechArticle","headline":"PHP & Composer","description":"Run PHP 5.6 to 8.x side by side with AutsPanel: choose a PHP-FPM version per website, manage extensions and php.ini, and run Composer with any version.","url":"https://auts-tech.github.io/autspanel/docs/php-composer.html","dateModified":"2026-10-19","inLanguage":"en","author":{"@id":"https://auts-tech.github.io/autspanel/#aashish"},"publisher":{"@id":"https://auts-tech.github.io/autspanel/#org"},"about":{"@type":"SoftwareApplication","name":"AutsPanel","applicationCategory":"DeveloperApplication","operatingSystem":"Ubuntu, Debian"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AutsPanel","item":"https://auts-tech.github.io/autspanel/"},{"@type":"ListItem","position":2,"name":"Docs","item":"https://auts-tech.github.io/autspanel/docs/"},{"@type":"ListItem","position":3,"name":"PHP & Composer","item":"https://auts-tech.github.io/autspanel/docs/php-composer.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which PHP versions are supported?","acceptedAnswer":{"@type":"Answer","text":"Any version the ondrej/php (Ubuntu) or sury.org (Debian) repositories provide for your release, typically PHP 5.6 up to the latest 8.x."}},{"@type":"Question","name":"My PHP site shows 502 Bad Gateway. What now?","acceptedAnswer":{"@type":"Answer","text":"The site's PHP-FPM service is not running. Start it on the PHP & Composer page or switch the site to an installed version on its PHP tab."}}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html" aria-label="AutsPanel home"><span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20 12 4l7 16"/><path d="M8.2 13.5h7.6"/></svg></span>AutsPanel</a>
+    <nav class="nav-links" aria-label="Main"><a href="../features.html">Features</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../compare/index.html">Compare</a><a href="../about.html">About</a></nav>
+    <div class="nav-cta">
+      <a class="btn" href="https://github.com/auts-tech/backup-vps" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> GitHub</a>
+      <a class="btn btn-primary" href="../docs/installation.html">Install free</a>
+    </div>
+    <details class="menu">
+      <summary aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></summary>
+      <nav class="menu-panel" aria-label="Mobile"><a href="../features.html">Features</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../compare/index.html">Compare</a><a href="../about.html">About</a><a href="../docs/installation.html">Install free</a><a href="https://github.com/auts-tech/backup-vps" rel="noopener">GitHub</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+
+<div class="container docs">
+  <aside class="docs-nav" aria-label="Documentation"><h4>Getting started</h4><a href="../docs/index.html">Introduction</a><a href="../docs/installation.html">Installation</a><a href="../docs/how-it-works.html">How it works</a><h4>Hosting</h4><a href="../docs/websites.html">Websites</a><a href="../docs/deployments.html">Git deployments</a><a href="../docs/domains-ssl.html">Domains & SSL</a><a href="../docs/databases.html">Databases</a><a href="../docs/php-composer.html" aria-current="page">PHP & Composer</a><h4>Operations</h4><a href="../docs/backups.html">Backups & restore</a><a href="../docs/security.html">Security</a><a href="../docs/api.html">REST API</a><a href="../docs/troubleshooting.html">Troubleshooting</a></aside>
+  <article class="prose">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">AutsPanel</a> / <a href="../docs/index.html">Docs</a> / <span>PHP & Composer</span></nav>
+    <h1>PHP & Composer</h1>
+    <nav class="toc" aria-label="On this page"><a href="#versions">Install PHP versions</a><a href="#site">Choose a website's PHP version</a><a href="#ini">Extensions and php.ini</a><a href="#composer">Composer</a><a href="#laravel">Laravel scheduler</a></nav>
+    
+<p class="lead">Run old and new PHP applications on the same server: every website can use its own PHP-FPM version.</p>
+<h2 id="versions">Install PHP versions</h2>
+<p>On the <strong>PHP &amp; Composer</strong> page, click <strong>Add repository</strong> once. It adds the ondrej/php repository on Ubuntu or packages.sury.org on Debian. Then install any version from 5.6 to 8.x with the common extensions. Several versions run side by side, each with its own FPM service.</p>
+<figure class="frame" style="margin:0;"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>panel.example.com</span></div><img src="../assets/img/screenshot-php-composer.png" alt="PHP and Composer page with installed PHP versions and the Composer runner" width="1440" height="900" loading="lazy" decoding="async"></figure>
+<h2 id="site">Choose a website's PHP version</h2>
+<p>New PHP, Laravel and WordPress websites use the newest installed version — or the one matching the <code>php</code> requirement in <code>composer.json</code>. Switch at any time on the website's <strong>PHP</strong> tab; nginx is updated and tested automatically.</p>
+<h2 id="ini">Extensions and php.ini</h2>
+<p>Enable or disable extensions per version and edit common <code>php.ini</code> settings such as <code>memory_limit</code>, <code>upload_max_filesize</code>, <code>post_max_size</code> and <code>max_execution_time</code>. You can also choose the default <code>php</code> command for the terminal.</p>
+<h2 id="composer">Composer</h2>
+<p>The Composer section installs Composer (with its checksum verified) and keeps it updated. Run <code>install</code>, <code>update</code>, <code>require</code>, <code>remove</code>, <code>dump-autoload</code> and more in any project folder, with the PHP version you choose and live output. Deployments run <code>composer install</code> automatically for PHP sites.</p>
+<h2 id="laravel">Laravel scheduler</h2>
+<p>Turn on <strong>Laravel scheduler</strong> on a Laravel website's PHP tab. AutsPanel adds the cron entry that runs <code>php artisan schedule:run</code> every minute with the site's PHP version.</p>
+    <h2 id="faq">Frequently asked questions</h2><div class="faq"><details open><summary>Which PHP versions are supported?</summary><p>Any version the ondrej/php (Ubuntu) or sury.org (Debian) repositories provide for your release, typically PHP 5.6 up to the latest 8.x.</p></details><details><summary>My PHP site shows 502 Bad Gateway. What now?</summary><p>The site's PHP-FPM service is not running. Start it on the PHP & Composer page or switch the site to an installed version on its PHP tab.</p></details></div>
+    <p class="note" style="margin-top:40px;">Last updated 2026-10-19 · <a href="https://github.com/auts-tech/autspanel/edit/main/docs/php-composer.html" rel="noopener">Improve this page on GitHub</a></p>
+    <nav class="pager" aria-label="Pagination">
+      <a class="prev" href="../docs/databases.html"><small>Previous</small>Databases</a>
+      <a class="next" href="../docs/backups.html"><small>Next</small>Backups & restore</a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="../index.html"><span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20 12 4l7 16"/><path d="M8.2 13.5h7.6"/></svg></span>AutsPanel</a>
+        <p style="margin-top:14px;">The free, open-source hosting control panel for Ubuntu &amp; Debian VPS. Deploy apps from Git with SSL, databases, backups and a firewall.</p>
+        <p><a href="mailto:tm.aashish1@gmail.com">tm.aashish1@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="../features.html">Features</a></li>
+          <li><a href="../docs/installation.html">Installation</a></li>
+          <li><a href="../docs/index.html">Documentation</a></li>
+          <li><a href="../docs/how-it-works.html">How it works</a></li>
+          <li><a href="../docs/api.html">REST API</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Compare</h4>
+        <ul>
+          <li><a href="../compare/cpanel-alternative.html">cPanel alternative</a></li>
+          <li><a href="../compare/aapanel-alternative.html">aaPanel alternative</a></li>
+          <li><a href="../compare/plesk-alternative.html">Plesk alternative</a></li>
+          <li><a href="../compare/index.html">All control panels</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="https://github.com/auts-tech/backup-vps" rel="noopener">Source code</a></li>
+          <li><a href="https://github.com/auts-tech/backup-vps/issues" rel="noopener">Report a bug</a></li>
+          <li><a href="https://github.com/auts-tech" rel="noopener">auts-tech on GitHub</a></li>
+          <li><a href="../about.html">About &amp; contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <a href="https://github.com/auts-tech" rel="noopener">auts-tech</a> · Released under the <a href="https://github.com/auts-tech/backup-vps/blob/main/LICENSE" rel="noopener">MIT License</a></span>
+      <span>Developed by <a href="https://github.com/aashishtimalsina" rel="noopener author">Aashish Timalsina</a></span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

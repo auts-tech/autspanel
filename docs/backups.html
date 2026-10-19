@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website &amp; VPS Backups to Google Drive, S3, SFTP — AutsPanel</title>
+<meta name="description" content="Back up websites (database, files and .env) to Google Drive, Amazon S3 or SFTP on a schedule with AutsPanel, restore with a live log, and take full VPS snapshots.">
+<link rel="canonical" href="https://auts-tech.github.io/autspanel/docs/backups.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Aashish Timalsina">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="AutsPanel">
+<meta property="og:title" content="Website &amp; VPS Backups to Google Drive, S3, SFTP — AutsPanel">
+<meta property="og:description" content="Back up websites (database, files and .env) to Google Drive, Amazon S3 or SFTP on a schedule with AutsPanel, restore with a live log, and take full VPS snapshots.">
+<meta property="og:url" content="https://auts-tech.github.io/autspanel/docs/backups.html">
+<meta property="og:image" content="https://auts-tech.github.io/autspanel/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AutsPanel — free open-source hosting control panel">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Website &amp; VPS Backups to Google Drive, S3, SFTP — AutsPanel">
+<meta name="twitter:description" content="Back up websites (database, files and .env) to Google Drive, Amazon S3 or SFTP on a schedule with AutsPanel, restore with a live log, and take full VPS snapshots.">
+<meta name="twitter:image" content="https://auts-tech.github.io/autspanel/assets/img/og-image.png">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://auts-tech.github.io/autspanel/#org","name":"auts-tech","url":"https://github.com/auts-tech","logo":"https://auts-tech.github.io/autspanel/assets/img/icon-512.png","sameAs":["https://github.com/auts-tech","https://github.com/auts-tech/backup-vps"],"email":"tm.aashish1@gmail.com","telephone":"+9779848077880","founder":{"@id":"https://auts-tech.github.io/autspanel/#aashish"}},{"@type":"Person","@id":"https://auts-tech.github.io/autspanel/#aashish","name":"Aashish Timalsina","url":"https://github.com/aashishtimalsina","sameAs":["https://github.com/aashishtimalsina"],"jobTitle":"Software developer","worksFor":{"@id":"https://auts-tech.github.io/autspanel/#org"}},{"@type":"TechArticle","headline":"Backups & restore","description":"Back up websites (database, files and .env) to Google Drive, Amazon S3 or SFTP on a schedule with AutsPanel, restore with a live log, and take full VPS snapshots.","url":"https://auts-tech.github.io/autspanel/docs/backups.html","dateModified":"2026-10-19","inLanguage":"en","author":{"@id":"https://auts-tech.github.io/autspanel/#aashish"},"publisher":{"@id":"https://auts-tech.github.io/autspanel/#org"},"about":{"@type":"SoftwareApplication","name":"AutsPanel","applicationCategory":"DeveloperApplication","operatingSystem":"Ubuntu, Debian"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AutsPanel","item":"https://auts-tech.github.io/autspanel/"},{"@type":"ListItem","position":2,"name":"Docs","item":"https://auts-tech.github.io/autspanel/docs/"},{"@type":"ListItem","position":3,"name":"Backups & restore","item":"https://auts-tech.github.io/autspanel/docs/backups.html"}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="../index.html" aria-label="AutsPanel home"><span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20 12 4l7 16"/><path d="M8.2 13.5h7.6"/></svg></span>AutsPanel</a>
+    <nav class="nav-links" aria-label="Main"><a href="../features.html">Features</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../compare/index.html">Compare</a><a href="../about.html">About</a></nav>
+    <div class="nav-cta">
+      <a class="btn" href="https://github.com/auts-tech/backup-vps" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> GitHub</a>
+      <a class="btn btn-primary" href="../docs/installation.html">Install free</a>
+    </div>
+    <details class="menu">
+      <summary aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></summary>
+      <nav class="menu-panel" aria-label="Mobile"><a href="../features.html">Features</a><a href="../docs/index.html" aria-current="page">Docs</a><a href="../compare/index.html">Compare</a><a href="../about.html">About</a><a href="../docs/installation.html">Install free</a><a href="https://github.com/auts-tech/backup-vps" rel="noopener">GitHub</a></nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+
+<div class="container docs">
+  <aside class="docs-nav" aria-label="Documentation"><h4>Getting started</h4><a href="../docs/index.html">Introduction</a><a href="../docs/installation.html">Installation</a><a href="../docs/how-it-works.html">How it works</a><h4>Hosting</h4><a href="../docs/websites.html">Websites</a><a href="../docs/deployments.html">Git deployments</a><a href="../docs/domains-ssl.html">Domains & SSL</a><a href="../docs/databases.html">Databases</a><a href="../docs/php-composer.html">PHP & Composer</a><h4>Operations</h4><a href="../docs/backups.html" aria-current="page">Backups & restore</a><a href="../docs/security.html">Security</a><a href="../docs/api.html">REST API</a><a href="../docs/troubleshooting.html">Troubleshooting</a></aside>
+  <article class="prose">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">AutsPanel</a> / <a href="../docs/index.html">Docs</a> / <span>Backups & restore</span></nav>
+    <h1>Backups & restore</h1>
+    <nav class="toc" aria-label="On this page"><a href="#what">What is backed up</a><a href="#targets">Backup destinations</a><a href="#schedule">Schedules and retention</a><a href="#restore">Restore a website</a></nav>
+    
+<p class="lead">Backups are per website, so restoring one site never touches another.</p>
+<h2 id="what">What is backed up</h2>
+<ul>
+  <li>The website's <strong>database</strong> as a compressed dump.</li>
+  <li>The website <strong>folder</strong>, skipping <code>node_modules</code> (it is rebuilt on deploy).</li>
+  <li>The <strong>.env</strong> file.</li>
+</ul>
+<p>Run <strong>Back up now</strong> on a website's Backups tab, or <strong>Backup All Websites</strong> on the Backups page. A <strong>VPS snapshot</strong> archives the whole server except system folders such as <code>/proc</code>, <code>/sys</code>, <code>/tmp</code> and caches — useful for disaster recovery, but large.</p>
+<h2 id="targets">Backup destinations</h2>
+<div class="table-wrap"><table><thead><tr><th>Destination</th><th>Setup</th></tr></thead><tbody><tr><td>Google Drive</td><td>Settings → Google Drive. Use an OAuth token (rclone.conf) for a personal Drive, or a service account with a Google Workspace shared drive.</td></tr><tr><td>S3-compatible</td><td>Amazon S3, Backblaze B2, Wasabi, Cloudflare R2, MinIO… — bucket, region, keys and endpoint.</td></tr><tr><td>SFTP</td><td>Any server with SSH: host, user, password or key, and a folder.</td></tr></tbody></table></div>
+<div class="callout"><p>Google service accounts have no storage of their own on personal @gmail.com drives. If you see a 403 storageQuotaExceeded error, switch to an OAuth token or a shared drive.</p></div>
+<h2 id="schedule">Schedules and retention</h2>
+<p>Set a schedule for each website on its Backups tab, or use the presets on the <strong>Cron</strong> page (backup all websites, VPS snapshot, cleanup). <strong>Settings → Retention policy</strong> (30 days by default) decides when the cleanup task deletes old backups from remote storage. Every scheduled run writes to <code>/var/log/vps-panel-cron.log</code>.</p>
+<h2 id="restore">Restore a website</h2>
+<p>On the website's <strong>Backups</strong> tab, click <strong>Restore</strong> next to a backup and choose what to restore: the database, the files and/or <code>.env</code>. A job with a live log downloads the backup, imports the database and extracts the files back into the website folder. Restart the app from the App tab afterwards.</p>
+<div class="callout tip"><p>Test a restore once after setting up backups. A backup you have never restored is only a hope.</p></div>
+    
+    <p class="note" style="margin-top:40px;">Last updated 2026-10-19 · <a href="https://github.com/auts-tech/autspanel/edit/main/docs/backups.html" rel="noopener">Improve this page on GitHub</a></p>
+    <nav class="pager" aria-label="Pagination">
+      <a class="prev" href="../docs/php-composer.html"><small>Previous</small>PHP & Composer</a>
+      <a class="next" href="../docs/security.html"><small>Next</small>Security</a>
+    </nav>
+  </article>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="../index.html"><span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20 12 4l7 16"/><path d="M8.2 13.5h7.6"/></svg></span>AutsPanel</a>
+        <p style="margin-top:14px;">The free, open-source hosting control panel for Ubuntu &amp; Debian VPS. Deploy apps from Git with SSL, databases, backups and a firewall.</p>
+        <p><a href="mailto:tm.aashish1@gmail.com">tm.aashish1@gmail.com</a></p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="../features.html">Features</a></li>
+          <li><a href="../docs/installation.html">Installation</a></li>
+          <li><a href="../docs/index.html">Documentation</a></li>
+          <li><a href="../docs/how-it-works.html">How it works</a></li>
+          <li><a href="../docs/api.html">REST API</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Compare</h4>
+        <ul>
+          <li><a href="../compare/cpanel-alternative.html">cPanel alternative</a></li>
+          <li><a href="../compare/aapanel-alternative.html">aaPanel alternative</a></li>
+          <li><a href="../compare/plesk-alternative.html">Plesk alternative</a></li>
+          <li><a href="../compare/index.html">All control panels</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="https://github.com/auts-tech/backup-vps" rel="noopener">Source code</a></li>
+          <li><a href="https://github.com/auts-tech/backup-vps/issues" rel="noopener">Report a bug</a></li>
+          <li><a href="https://github.com/auts-tech" rel="noopener">auts-tech on GitHub</a></li>
+          <li><a href="../about.html">About &amp; contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <a href="https://github.com/auts-tech" rel="noopener">auts-tech</a> · Released under the <a href="https://github.com/auts-tech/backup-vps/blob/main/LICENSE" rel="noopener">MIT License</a></span>
+      <span>Developed by <a href="https://github.com/aashishtimalsina" rel="noopener author">Aashish Timalsina</a></span>
+    </div>
+  </div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
