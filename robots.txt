@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://auts-tech.github.io/autspanel/sitemap.xml
+Sitemap: https://panel.auts.com.np/sitemap.xml
