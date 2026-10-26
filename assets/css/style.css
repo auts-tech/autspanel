@@ -276,15 +276,10 @@ kbd {
   flex-shrink: 0;
 }
 
-.brand-mark {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: var(--brand-solid);
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.brand-logo {
+  height: 30px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {

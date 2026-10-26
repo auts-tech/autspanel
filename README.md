@@ -23,7 +23,7 @@ assets/js/search-index.js      Pages and sections the search box can find
 assets/fonts/                  Inter variable font (SIL Open Font License)
 assets/img/                    Screenshots, social image and icons
 sitemap.xml, robots.txt        For search engines
-site.webmanifest, favicon.svg  Icons
+site.webmanifest, favicon.ico  Icons
 ```
 
 ## Preview locally
